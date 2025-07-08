@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jackson Scott</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 1rem;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Space Mono', monospace;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
+      margin-bottom: 1.5rem;
+    }
+
+    .loader {
+      width: 80%;
+      max-width: 300px;
+      height: 8px;
+      background: #222;
+      border: 1px solid #444;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .loader-fill {
+      width: 0%;
+      height: 100%;
+      background: #fff;
+      animation: load 7200s forwards; /* 2 hours */
+    }
+
+    @keyframes load {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+
+    .status {
+      margin-top: 0.75rem;
+      font-size: clamp(0.8rem, 2.5vw, 1rem);
+      color: #888;
+    }
+
+    .email {
+      margin-top: 1.25rem;
+      font-size: clamp(0.85rem, 2.5vw, 1rem);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .email a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .email a:hover {
+      text-decoration: underline;
+    }
+
+    .email svg {
+      fill: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Jackson Scott</h1>
+  <div class="loader">
+    <div class="loader-fill"></div>
+  </div>
+  <div class="status">loading... site under construction</div>
+  <div class="email">
+    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 
+               2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM4 
+               8l8 5 8-5v10H4V8zm8 3L4 6h16l-8 5z"/>
+    </svg>
+    <a href="mailto:hello@jxnscott.com">hello@jxnscott.com</a>
+  </div>
+</body>
+</html>
